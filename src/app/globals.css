@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background: #0b0805;
+  color: #ede8df;
+  font-family: 'Nunito', system-ui, sans-serif;
+}
+
+/* ─── Animations ─── */
+@keyframes ml-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+@keyframes ml-fade {
+  from { opacity: 0; transform: translateY(5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ml-toast {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes ml-spin {
+  to { transform: rotate(360deg); }
+}
+
+.ml-pulse { animation: ml-pulse 1.5s ease-in-out infinite; }
+.ml-fade  { animation: ml-fade  0.22s ease; }
+.ml-toast { animation: ml-toast 0.2s ease; }
+.ml-spin  { animation: ml-spin  1.2s linear infinite; }
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: #0b0805; }
+::-webkit-scrollbar-thumb { background: #2d2018; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #ff5e00; }
+
+/* ─── Input placeholder ─── */
+input::placeholder { color: #52433a; }
+input:focus        { outline: none; }
+button             { font-family: inherit; }
